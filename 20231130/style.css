@@ -1,0 +1,64 @@
+:root {
+  font-size: 11px;
+
+  /* https://htmlcolorcodes.com/color-names/ */
+  --color-1: #bc1f4b;   /* https://pickcoloronline.com/ */
+  --color-2: MistyRose;
+
+  --size: min(40vh, 40vw);
+}
+
+body {
+  color: black;
+  height: 100%;
+  margin: 0;
+
+}
+
+.squares {
+  position: absolute;
+  z-index:1;
+}
+.square {
+  position: relative;
+  height: var(--_size);
+  width: var(--_size);
+  background-color: var(--color-2);
+  border-radius: 5px;
+}
+.square-top {
+  --_size: min(20vh, 20vw);
+  top: calc(50vh - var(--size) / 2 - var(--_size) / 4);
+  left: calc(50vw - var(--size) / 2 - var(--_size) / 4);
+}
+
+.square-mid {
+  --_size: min(12vh, 12vw);
+  top: calc(50vh + var(--size) / 2 - var(--_size) / 2);
+  left: calc(50vw + var(--size) / 2 - var(--_size) / 2);
+}
+
+.square-bot {
+  --_size: min(8vh, 8vw);
+  top: calc(50vh + var(--size) / 2 + min(12vh, 12vw) / 2 + min(3vh,3vw));
+  left: calc(50vw + var(--size) / 2 + min(12vh, 12vw) / 2);
+}
+
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  z-index: 0;
+}
+
+.main-content {
+  height: var(--size);
+  width: var(--size);
+  background-color: blue;
+  z-index: 2;
+  border-radius: 5px;
+  box-shadow: 16px 16px 2px -2px lightgrey;
+}

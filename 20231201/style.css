@@ -1,0 +1,70 @@
+:root {
+  font-size: 11px;
+
+  /* https://htmlcolorcodes.com/color-names/ */
+  --color-1: #bc1f4b;   /* https://pickcoloronline.com/ */
+  --color-2: MistyRose;
+
+  --size: min(40vh, 40vw);
+}
+
+body {
+  color: black;
+  height: 100%;
+  margin: 0;
+  background-image: url(http://raw.githubusercontent.com/pascal-brand38/icodethis/main/20231201/image.webp);
+  background-size: cover;
+}
+
+.page {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30vw;
+  height: 100vh;
+}
+
+.first {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.second {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.dates {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  font-weight: bolder;
+}
+
+.date-card {
+  filter: opacity(80%);
+  background-color: white;
+  border-radius: 5px;
+  height: 15vh;
+  width: 10vh;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 10px;
+}
+
+.date-number {
+  font-size: 24px;
+}
+
+.date-unit {
+  margin-top: 10;
+  font-size: 12px;
+}

@@ -1,0 +1,62 @@
+:root {
+  font-size: 11px;
+}
+
+body {
+  background-color: black;
+  color: white;
+  height: 100%;
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.current-plan {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  padding: 5 15 5 15;
+  background-color: #bc1f4b;    /* https://pickcoloronline.com/ */
+  border-radius: 0 0 5px 5px;
+}
+.current-plan--head, .current-plan--body {
+  margin: 5px;
+}
+.current-plan--body {
+  font-weight: bold;
+}
+
+
+.choose-plan {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.choose-plan--body {
+  margin-top: 20;
+}
+
+.choose-plan-cards {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20;
+}
+
+.choose-plan-card {
+  margin: 0 10;
+  width: 25vw;
+  height: 50vh;
+  background-color: #22262b;
+  border-radius: 5px;
+}
