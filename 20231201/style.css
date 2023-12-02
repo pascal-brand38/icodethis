@@ -64,6 +64,16 @@ body {
   font-size: 24px;
 }
 
+.date-digit {
+  position: relative;
+  animation: animation-digit 400ms ease-in-out;
+}
+
+@keyframes animation-digit {
+  0%   { top: -20px; filter: opacity(0%);}
+  100% { top: 0px; filter: opacity(100%);}
+}
+
 .date-unit {
   margin-top: 10;
   font-size: 12px;
