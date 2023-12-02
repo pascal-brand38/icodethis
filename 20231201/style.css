@@ -14,6 +14,7 @@ body {
   margin: 0;
   background-image: url(http://raw.githubusercontent.com/pascal-brand38/icodethis/main/20231201/image.webp);
   background-size: cover;
+  font-family: 'Roboto', sans-serif;
 }
 
 .page {
@@ -62,16 +63,36 @@ body {
 
 .date-number {
   font-size: 24px;
+  position: static;
 }
 
-.date-digit {
+.date-digit-wrapper {
+  display: inline-block;
   position: relative;
-  animation: animation-digit 400ms ease-in-out;
+  height: 2ch;
+  width: 1ch;
+  margin: 0;
+}
+.date-digit {
+  position: absolute;
+  margin: 0;
+}
+.date-digit-animation-new {
+  animation: digit-animation-new 400ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+.date-digit-animation-old {
+  animation: digit-animation-old 400ms ease-in-out 200ms;
+  animation-fill-mode: forwards;
 }
 
-@keyframes animation-digit {
-  0%   { top: -20px; filter: opacity(0%);}
+@keyframes digit-animation-new {
+  0%   { top: -50px; filter: opacity(0%);}
   100% { top: 0px; filter: opacity(100%);}
+}
+@keyframes digit-animation-old {
+  0%   { top: 0px; filter: opacity(100%);}
+  100% { top: 50px; filter: opacity(0%);}
 }
 
 .date-unit {

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
-
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -20,22 +20,50 @@
 
   <div class="dates">
     <div class="date-card">
-      <div id="days" class="date-number"> <span></span><span></span> </div>
+      <div id="days" class="date-number">
+        <div class="date-digit-wrapper">
+          <div class="date-digit"></div><div  class="date-digit"></div>
+        </div><div class="date-digit-wrapper">
+          <div class="date-digit">X</div><div  class="date-digit">Y</div>
+        </div>
+      </div>
       <div class="date-unit"> Days </div>
     </div>
 
     <div class="date-card">
-      <div id="hours" class="date-number"> <span></span><span></span> </div>
+      <div id="hours" class="date-number">
+        <div class="date-digit-wrapper">
+          <div class="date-digit"></div><div  class="date-digit"></div>
+        </div><div class="date-digit-wrapper">
+          <div class="date-digit">X</div><div  class="date-digit">Y</div>
+        </div>
+      </div>
       <div class="date-unit"> Hours </div>
     </div>
 
     <div class="date-card">
-      <div id="minutes" class="date-number"> <span></span><span></span> </div>
+      <div id="minutes" class="date-number">
+        <div class="date-digit-wrapper">
+          <div class="date-digit"></div><div  class="date-digit"></div>
+        </div><div class="date-digit-wrapper">
+          <div class="date-digit">X</div><div  class="date-digit">Y</div>
+        </div>
+      </div>
       <div class="date-unit"> Minutes </div>
     </div>
 
     <div class="date-card">
-      <div id="seconds" class="date-number"> <span class="date-digit"></span><span></span> </div>
+      <div id="seconds" class="date-number">
+        <!--
+          use class wrapper so that contained divs (cf position:absolute) have the same position
+          first div is for the new digit value, and 2nd div for the old one (that vanishes)
+        -->
+        <div class="date-digit-wrapper">
+          <div class="date-digit"></div><div  class="date-digit"></div>
+        </div><div class="date-digit-wrapper">
+          <div class="date-digit">X</div><div  class="date-digit">Y</div>
+        </div>
+      </div>
       <div class="date-unit"> Seconds </div>
     </div>
   </div>

@@ -1,27 +1,34 @@
 // setInterval(func, delay)
-let daysElement = document.getElementById('days').getElementsByTagName('span');
-let hoursElement = document.getElementById('hours').getElementsByTagName('span');
-let minutesElement = document.getElementById('minutes').getElementsByTagName('span');
-let secondsElement = document.getElementById('seconds').getElementsByTagName('span');
+let daysElement = document.getElementById('days').getElementsByTagName('div');
+let hoursElement = document.getElementById('hours').getElementsByTagName('div');
+let minutesElement = document.getElementById('minutes').getElementsByTagName('div');
+let secondsElement = document.getElementById('seconds').getElementsByTagName('div');
 
 // restart animations on a given dom element
 // from https://stackoverflow.com/questions/6268508/restart-animation-in-css3-any-better-way-than-removing-the-element
-const restartAnimations = (el) => {
-  el.classList.remove('date-digit');
+const restartAnimations = (el, c) => {
+  el.classList.remove(c);
   el.offsetHeight;
-  el.classList.add('date-digit')};
+  el.classList.add(c)
+};
 
 function setDigits(el, number, prevnumber) {
   let d = Math.floor(number / 10)
-  if (d !== Math.floor(prevnumber / 10)) {
-    el[0].textContent = d
-    restartAnimations(el[0])
+  let dprev = Math.floor(prevnumber / 10)
+  if (d !== dprev) {
+    el[1].textContent = d
+    el[2].textContent = dprev
+    restartAnimations(el[1], 'date-digit-animation-new')
+    restartAnimations(el[2], 'date-digit-animation-old')
   }
 
   d = number % 10
-  if (d !== prevnumber % 10) {
-    el[1].textContent = d
-    restartAnimations(el[1])
+  dprev = prevnumber % 10
+  if (d !== dprev % 10) {
+    el[4].textContent = d
+    el[5].textContent = dprev
+    restartAnimations(el[4], 'date-digit-animation-new')
+    restartAnimations(el[5], 'date-digit-animation-old')
   }
 }
 
