@@ -1,0 +1,63 @@
+header {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: thin solid #ccc;
+}
+.nav {
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 20px;
+  gap: 16px;
+  align-self: flex-start;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+.nav a {
+  text-decoration: none;
+  display: inline-block;
+  color: #222;
+  font-size: 16px;
+  position: relative;
+  background: rgba(16, 16, 24, 0.05);
+  padding: 6px 16px;
+  margin-left: 5px;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease-out;
+}
+.nav a span {
+  position: relative;
+  z-index: 10;
+}
+.nav a div {
+  background: #dfccfb;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  transition: all 60ms ease-out 0s;
+}
+.item {
+  border-bottom: thin solid #222;
+}
+.item:first-child {
+  background: #ff90bc;
+}
+.item:nth-child(2) {
+  background: #8acdd7;
+}
+.item:nth-child(3) {
+  background: #f9f9e0;
+}
+.item:nth-child(4) {
+  background: #fff78a;
+}
+.item:last-child {
+  background: #f3b664;
+}
